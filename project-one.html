@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+	<!-- <audio controls>
+        <source src="./audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3" type="audio/mp3" /> 
+    </audio> -->
+
+    <audio src="./audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3" ></audio>
+
+</body>
+
+<script type="text/javascript">
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioContext = new AudioContext();
+
+    // get the audio element
+    const audioElement = document.querySelector('audio');
+
+    // pass it into the audio context
+    const track = audioContext.createMediaElementSource(audioElement); 
+</script>
+
+</html>
