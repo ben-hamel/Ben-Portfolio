@@ -49,10 +49,6 @@
 
 <script type="text/javascript">
 
-    
-
-
-
     //create audio context
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioContext = new AudioContext();
@@ -65,7 +61,7 @@
     const track = audioContext.createMediaElementSource(audioElement); 
 
     //connect audio graph
-    track.connect(audioContext.destination);
+    // track.connect(audioContext.destination);
 
     //create play button functionality 
     const playButton = document.querySelector('button');
@@ -93,8 +89,6 @@
     //add a gain node
     const gainNode = audioContext.createGain();
 
-    track.connect(gainNode).connect(audioContext.destination);
-
     //volume control
     const volumeControl = document.querySelector('#volume');
 
@@ -111,6 +105,8 @@
     pannerControl.addEventListener('input', function() {
         panner.pan.value = this.value;
     }, false);
+
+    track.connect(gainNode).connect(panner).connect(audioContext.destination);
 </script>
 
 </html>
