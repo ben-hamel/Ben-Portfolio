@@ -1,0 +1,79 @@
+/* Main player rectangle */
+.player {
+  position: absolute;
+  font-size: 15px;
+  width: 350px;
+  height: 450px;
+  left: 200px;
+  top: 100px;
+  background:#F5E9BD;
+  border-radius: 45px;
+}
+/*  */
+
+/* play button */
+button {
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  left: 200px;
+  top: 350px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  background: #00BFFF;
+  border-radius: 45px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* volume slider*/
+.vol-container {
+position: absolute;
+width: 100px;
+height: 15px;
+left: 200px;
+top: 234px;
+}
+
+/* Pan Slider */
+.pan-container {
+position: absolute;
+width: 100px;
+height: 30px;
+left: 200px;
+top: 280px;
+}
+
+.visuals { 
+  position: absolute;
+  left: 25px;
+  
+}
+
+
+
+/* Slider and Thumb */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  height: 20px; /* Specified height */
+  background: #2E2836; /* Grey background */
+  outline: none; /* Remove outline */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  position: static;
+  width: 20px;
+  height: 20px;
+  left: 189px;
+  top: 0px;
+
+  background: #FFFFFF;
+  border: 2px solid #2E2836;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+/*  */
+

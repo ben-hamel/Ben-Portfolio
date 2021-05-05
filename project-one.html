@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 1: Web API Audio Player</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/project-one.css">
     <script type="module" src="scripts/header-footer.js"></script>
     <script type="module" src="./scripts/main.js"></script>
+
 </head>
 <body>
     <!-- header custom element -->
     <page-header></page-header>
+    
 
+    <div class="player">
     <!-- audio -->
     <audio src="./audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3" ></audio>
 
     <!-- play pause button -->
-    <button data-playing="false" role="switch" aria-checked="false">
-        <span>Play/Pause</span>
-    </button> <br><br>
+    <div class="playbutton">
+        <button data-playing="false" role="switch" aria-checked="false">
+            <span>Play/Pause</span>
+        </button> <br><br>
+    </div>
+  
 
     <!-- volume slider-->
-    <label for="volume">Volume</label>
-    <input type="range" id="volume" min="0" max="2" value="1" step="0.01"><br><br>
+    <div class="vol-container">
+        <label for="volume">Volume</label>
+        <input type="range" class="slider thumb" id="volume" min="0" max="2" value="1" step="0.01"><br><br>
+    </div>
+
 
     <!-- pan slider -->
-    <label for="panner">Pan</label>
-    <input type="range" id="panner" name="Pan" min="-1" max="1" value="0" step="0.01"><br><br>
+    <div class="pan-container">
+        <label for="panner">Pan</label>
+        <input type="range" class="slider thumb" id="panner" name="Pan" min="-1" max="1" value="0" step="0.01"><br><br>  
+    </div>
 
     <!-- audio visualizer -->
-    <canvas id="visualizer"></canvas>
+    <canvas class="visuals" id="visualizer"></canvas>
+
+    </div>
 
 
     <!-- footer custom element -->
@@ -118,11 +132,11 @@
 
         analyser.getByteTimeDomainData(dataArray);
 
-        canvasCtx.fillStyle = "rgb(200, 200, 200)";
+        canvasCtx.fillStyle = "rgb(0, 0, 0)";
         canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
         canvasCtx.lineWidth = 2;
-        canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+        canvasCtx.strokeStyle = "rgb(255, 255, 255)";
 
         canvasCtx.beginPath();
 
