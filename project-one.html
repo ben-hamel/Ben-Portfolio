@@ -18,14 +18,14 @@
 
     <div class="player">
     <!-- audio -->
-    <audio src="./audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3" ></audio>
+    <audio id="audio-choice" src="./audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3" ></audio>
 
     <!-- play pause button -->
-    <div class="playbutton">
+    <!-- <div class="playbutton">  -->
         <button data-playing="false" role="switch" aria-checked="false">
             <span>Play/Pause</span>
         </button> <br><br>
-    </div>
+    <!-- </div> -->
   
 
     <!-- volume slider-->
@@ -45,6 +45,17 @@
     <canvas class="visuals" id="visualizer"></canvas>
 
     </div>
+
+    <!-- song selector -->
+    <div class="song-selector">
+        <label for="songs">Choose a Song:</label><br>
+        <select id="songs" name="songs" onchange="songSelect()">
+          <option value="song1">Bulbasaur</option>
+          <option value="song2">Warsong</option>
+          <option value="song3">Love Again</option>
+        </select>
+    </div>
+   
 
 
     <!-- footer custom element -->
@@ -162,6 +173,32 @@
     }
 
     draw();
+
+  
+
+    function songSelect() {
+        // song choices
+        const songOne = './audio/Bulbasaur-Verse-V.1.3_possible arrangement finish.mp3';
+        const songTwo = './audio/War Song MIX 2.1.mp3';
+        const songThree = './audio/Love_Again_Mixdown_V3_R15_MP3.mp3';
+
+        //grab value choosen and store in variable 
+        let myValue = document.getElementById('songs').value
+
+        //switch statement for song choice
+        switch(myValue) {
+            case 'song1': 
+                document.getElementById("audio-choice").src = songOne; 
+                break;
+            
+            case 'song2':
+                document.getElementById("audio-choice").src = songTwo;
+                break;
+
+            case 'song3':
+            document.getElementById("audio-choice").src = songThree;
+        }
+    }
 
 </script>
 

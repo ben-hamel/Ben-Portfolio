@@ -49,6 +49,15 @@ top: 280px;
   
 }
 
+/* Song Selector */
+
+.song-selector {
+  position: absolute;
+  height: 50px;
+  left: 230px;
+  top: 340px;
+  font-size: 15px;
+}
 
 
 /* Slider and Thumb */
