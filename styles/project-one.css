@@ -1,23 +1,40 @@
 /* Main player rectangle */
 .player {
-  position: absolute;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-row-start: 2;
   font-size: 15px;
-  width: 350px;
-  height: 450px;
-  left: 200px;
-  top: 100px;
+  max-width: 380px;
+  width:100%;
+  margin: 3vh auto;
+  max-height: 500px;
+  height: 100%;
   background:#F5E9BD;
   border-radius: 45px;
 }
-/*  */
+
+.container-controls{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 30%;
+  row-gap: 10%;
+  padding:0 10% 10% 10%;
+  max-width: 100%;
+  min-width: 0%;
+  min-width: 0;
+}
+
+.visuals {
+  padding: 10%;
+  width:80%;
+}
 
 /* play button */
 button {
-  position: absolute;
-  width: 130px;
-  height: 50px;
-  left: 200px;
-  top: 350px;
+  grid-column-start: 2;
+  align-items: center;
+  height: 80%;
+  width: 80%;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   background: #00BFFF;
@@ -27,55 +44,41 @@ button {
 
 /* volume slider*/
 .vol-container {
-position: absolute;
-width: 100px;
-height: 15px;
-left: 200px;
-top: 234px;
+  grid-column-start: 2;
 }
 
 /* Pan Slider */
 .pan-container {
-position: absolute;
-width: 100px;
-height: 30px;
-left: 200px;
-top: 280px;
-}
-
-.visuals { 
-  position: absolute;
-  left: 25px;
-  
+  grid-column-start: 2;
 }
 
 /* Song Selector */
-
 .song-selector {
-  position: absolute;
-  height: 50px;
-  left: 230px;
-  top: 340px;
+  place-self: center stretch;
+  grid-column-start: 1;
+  grid-row-start: 1 ;
   font-size: 15px;
+  /* padding: 1%; */
 }
 
 
 /* Slider and Thumb */
 .slider {
-  -webkit-appearance: none;  /* Override default CSS styles */
+  -webkit-appearance: none;
   appearance: none;
-  height: 20px; /* Specified height */
-  background: #2E2836; /* Grey background */
-  outline: none; /* Remove outline */
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  height: 2vh;
+  width:80%; 
+  background: #2E2836;
+  outline: none;
+  -webkit-transition: .2s;
   transition: opacity .2s;
 }
 
 .thumb::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  position: static;
-  width: 20px;
-  height: 20px;
+  -webkit-appearance: none; 
+  /* position: static; */
+  width: 20%;
+  height: 2vh;
   left: 189px;
   top: 0px;
 
@@ -84,5 +87,5 @@ top: 280px;
   box-sizing: border-box;
   border-radius: 4px;
 }
-/*  */
+
 

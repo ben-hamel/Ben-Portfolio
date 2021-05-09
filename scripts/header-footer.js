@@ -1,9 +1,8 @@
 class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <header class="header">
                 <nav class="navbar">
-                    <a href="./index.html" class="nav-logo">BenHamel.</a>               
+                    <a href="./index.html" class="nav-logo">Ben Hamel Portfolio</a>               
                     <!-- ul.nav-menu>.nav-item*3>a.nav-link shorcut for html below-->
                     <ul class="nav-menu">
                         <li class="nav-item">
@@ -26,7 +25,6 @@ class MyHeader extends HTMLElement {
                         <span class="bar"></span>
                     </div>   
                 </nav>
-            </header>
         `
     }
 }
@@ -35,12 +33,8 @@ customElements.define('page-header', MyHeader)
 
 class MyFooter extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `
-            <footer>
-                Ben Hamel 2021
-            </footer>
-        `
+        this.innerHTML = `Ben Hamel 2021`
     }
 }
 
-customElements.define('page-footer', MyFooter)
+customElements.define('page-footer', MyFooter) 
