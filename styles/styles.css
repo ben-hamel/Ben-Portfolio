@@ -26,15 +26,11 @@ body {
 } */
 
 .header {
-    /* background-color: darkorange; */
     border-bottom: 1px solid #E2E8F0;
-    /* padding: 3vh; */
     height: 100%;
-  
 }
 
 footer {
-    /* background-color: lightcoral;s */
     padding: 1vh;
     width: 100%;
     font-size: 15px;
