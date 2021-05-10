@@ -18,7 +18,7 @@ body {
     margin: 0 auto;
     height: 100%;
     display: grid;
-    grid-template-rows: 10% auto 10%;
+    grid-template-rows: 50px 1fr 50px;
 }
 
 /* page-header {
@@ -35,7 +35,7 @@ body {
 
 footer {
     /* background-color: lightcoral;s */
-    padding: 3vh;
+    padding: 1vh;
     width: 100%;
     font-size: 15px;
     border-top: 1px solid #E2E8F0; 
