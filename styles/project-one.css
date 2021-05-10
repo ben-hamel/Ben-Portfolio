@@ -2,8 +2,8 @@
 
 .player {
   display: grid;
-  grid-template-rows: 40% 60%;
-  font-size: 15px;
+  grid-template-rows: 1fr 2fr;
+  font-size: 2rem;
   max-width: 500px;
   max-height: 600px;
   height:95%;
@@ -14,22 +14,28 @@
 
 .container-controls{
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 30% 30%;
+  /* grid-template-columns: 50% 50%; */
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 30% 30% 30%; */
+  grid-template-rows: 1fr 1fr 1fr;
   row-gap: 1%;
-  padding:5% 10% 5%;
+  padding:0 10% 5%;
 }
 
 .visuals {
   justify-self: center;
   margin: 8%;
   width: 70%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* play button */
 button {
   grid-column-start: 2;
   width: 80%;
+  height: 60%;
+  /* padding-top: 5px; */
+  margin-top: 5px;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   background: #00BFFF;
@@ -54,16 +60,18 @@ button {
   /* place-self: center fill; */
   grid-column-start: 1;
   grid-row-start: 1 ;
-  font-size: 20px;
+  font-size: 1em;
   width:100%;
   height: 50%;
+  
 
 }
 
 select {
   width: 80%;
   height: 80%;
-  font-size: 20px;
+  font-size: 1em;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 
@@ -77,6 +85,7 @@ select {
   outline: none;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .thumb::-webkit-slider-thumb {
