@@ -13,7 +13,7 @@ const headerContent = `
                 <a href="./project-one.html" class="nav-link">Project 1</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Project 2</a>
+                <a href="./project-two.html" class="nav-link">Project 2</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Project 3</a>

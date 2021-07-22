@@ -1,6 +1,7 @@
 /* Main player rectangle */
 
-.player {
+/* player V1 */
+/* .player {
   display: grid;
   grid-template-rows: 1fr 2fr;
   font-size: 2rem;
@@ -10,22 +11,37 @@
   background:#F5E9BD;
   border-radius: 45px;
   margin: 20px 30px;
+} */
+
+/* player v2- Center Align Elements from W3schools */
+/* https://www.w3schools.com/css/css_align.asp */
+.player {
+  font-size: 2rem;
+  margin: auto;
+  max-width: 400px;
+  background: #f5e9bd;
+  border-radius: 45px;
 }
 
-.container-controls{
+.visual-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+}
+
+.visuals {
+  width: 65%;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 30px;
+}
+
+.container-controls {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 5px;
-  padding:0 30px 10px;
-}
-
-.visuals {
-  justify-self: center;
-  margin: 50px;
-  width: 80%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border-radius: 30px;
+  padding: 0 30px 10px;
 }
 
 /* play button */
@@ -36,10 +52,10 @@ button {
   height: 60%;
   margin-top: 5px;
   font-size: 15px;
-  font-family: 'Roboto', sans-serif;
-  background: #00BFFF;
+  font-family: "Roboto", sans-serif;
+  background: #00bfff;
   border-radius: 45px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* volume slider*/
@@ -57,9 +73,9 @@ button {
 /* Song Selector */
 .song-selector {
   grid-column-start: 1;
-  grid-row-start: 1 ;
+  grid-row-start: 1;
   font-size: 1em;
-  width:100%;
+  width: 100%;
   height: 50%;
 }
 
@@ -67,9 +83,8 @@ button {
   width: 80%;
   height: 80%;
   font-size: 1em;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /* Slider and Thumb */
 .slider {
@@ -77,23 +92,21 @@ button {
   appearance: none;
   height: 40%;
   /* width:80%;  */
-  background: #2E2836;
+  background: #2e2836;
   outline: none;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .thumb::-webkit-slider-thumb {
-  -webkit-appearance: none; 
-  width: 20%;
-  height: 3.8vh;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
   left: 189px;
   top: 0px;
-  background: #FFFFFF;
-  border: 2px solid #2E2836;
+  background: #ffffff;
+  border: 2px solid #2e2836;
   box-sizing: border-box;
   border-radius: 4px;
 }
-
-
