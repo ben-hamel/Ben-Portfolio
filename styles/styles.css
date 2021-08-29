@@ -7,18 +7,54 @@
 }
 
 html {
-  /* font-size: 62.5%; */
+  /* 62.5 makes it so if you use 2.1rem font size, it will translate to 21 pixels */
+  font-size: 62.5%;
   font-family: "Roboto", sans-serif;
+
   height: 100%;
+
+  border: 5px dashed red;
 }
 
 body {
-  min-height: 100vh;
+  font-size: 1.6rem;
+
+  min-height: 100%;
+  width: 100%;
+
+  background-color: white;
+  /* border: 5px dashed pink; */
   margin: 0 auto;
-  height: 100%;
-  display: grid;
-  grid-template-rows: 50px 1fr 50px;
+
+  display: flex;
+  flex-direction: column;
 }
+
+footer {
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto;
+  border: 5px dashed green;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Main Content Styling */
+.main-content {
+  /* background-color: blueviolet; */
+
+  /* min-height: 100vh; */
+  max-height: 100%;
+}
+
+/* Nav bar styling */
 
 .header {
   border-bottom: 1px solid #e2e8f0;
@@ -28,22 +64,6 @@ body {
 .siteHeader {
   border-bottom: 1px solid #e2e8f0;
   height: 100%;
-}
-footer {
-  padding: 10px;
-  width: 100%;
-  font-size: 15px;
-  border-top: 1px solid #e2e8f0;
-  height: 100%;
-  max-height: 20px;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .navbar {
@@ -80,8 +100,8 @@ a {
 }
 
 .nav-link {
-  /* font-size: 1.6rem; */
-  font-size: 14px;
+  font-size: 1.6rem;
+  /* font-size: 14px; */
   font-weight: 400;
   color: #475569;
 }
@@ -91,9 +111,9 @@ a {
 }
 
 .nav-logo {
-  /* font-size: 2.1rem; */
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 2.5rem;
+  /* font-size: 18px; */
+  /* font-weight: 500; */
   color: #482ff7;
 }
 
